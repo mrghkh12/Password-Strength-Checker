@@ -2,7 +2,22 @@ const $ = document
 
 const passwordInput = $.querySelector('#passwordInput')
 const messageBox = $.querySelector('#messageBox')
+const showPassBtn = $.querySelector('.showPassBtn')
 
+
+showPassBtn.addEventListener('click' , () =>{
+    let showPassIcon = showPassBtn.querySelector('i')
+
+    if(showPassIcon.classList.contains('fa-square')){
+        passwordInput.type = 'text'
+        showPassIcon.className = 'fa-solid fa-square-check'
+        showPassIcon.style.color = 'rgb(3, 214, 3)'
+    }else{
+        passwordInput.type = 'password'
+        showPassIcon.className = 'fa-regular fa-square'
+        showPassIcon.style.color = '#fff'
+    }
+})
 
 passwordInput.addEventListener('keyup' , () =>{
     let value = passwordInput.value

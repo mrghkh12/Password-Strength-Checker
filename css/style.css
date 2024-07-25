@@ -65,3 +65,12 @@
     text-align: center;
     padding: 10px 0;
 }
+
+.container .showPassBtn{
+    color: #fff;
+    position: absolute;
+    top: -25px;
+    right: 5px;
+    cursor: pointer;
+    user-select: none;
+}
