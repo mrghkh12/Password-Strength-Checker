@@ -74,3 +74,10 @@
     cursor: pointer;
     user-select: none;
 }
+
+@media screen and (max-width: 550px) {
+    .container .inputBox #messageBox{
+        width: 100%;
+        text-align: center;
+    }
+}
