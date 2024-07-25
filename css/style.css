@@ -46,7 +46,7 @@
     width: 35px;
 }
 
-.container .inputBox #message{
+.container .inputBox #messageBox{
     position: absolute;
     bottom: -30px;
     color: #fff;
