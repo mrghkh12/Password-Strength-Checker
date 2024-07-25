@@ -13,6 +13,7 @@ passwordInput.addEventListener('keyup' , () =>{
     isHaveLowerCase(value)
     isHaveUpperCase(value)
     isHaveNumberCase(value)
+    isHaveSymbolCase(value)
 
      if (isHaveLowerCase(value)) {
         msgElem.innerHTML = "Weak"
@@ -24,17 +25,13 @@ passwordInput.addEventListener('keyup' , () =>{
     }
      if (isHaveNumberCase(value)) {
         msgElem.innerHTML = "Strong"
+        msgElem.style.color = 'greenyellow'
+    }
+     if (isHaveSymbolCase(value)) {
+        msgElem.innerHTML = "Very Strong"
         msgElem.style.color = 'rgb(3, 214, 3)'
     }
-//     if (value.search(/[A-Z]/) < 0) {
-//         console.log("Your password must contain at least one upper case letter."); 
-//     }
-//     if (value.search(/[0-9]/) < 0) {
-//         console.log("Your password must contain at least one digit.");
-//     }
-//    if (value.search(/[!@#\$%\^&\*_]/) < 0) {
-//         console.log("Your password must contain at least special char from -[ ! @ # $ % ^ & * _ ]"); 
-//     }
+
     if (value.length < 8) {
         msgElem.innerHTML = "Your password must be at least 8 characters"
         msgElem.style.color = '#fff'
@@ -68,6 +65,16 @@ function isHaveNumberCase(value){
         return true
     }else{
         haveNumber.style.color = 'red'
+        return false
+    }
+}
+function isHaveSymbolCase(value){
+    let haveSymbol = messageBox.querySelector('.Symbol')
+    if (value.search(/[!@#\$%\^&\*_]/) != -1) {
+        haveSymbol.style.color = 'green'
+        return true
+    }else{
+        haveSymbol.style.color = 'red'
         return false
     }
 }
