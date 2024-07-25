@@ -3,7 +3,14 @@ const $ = document
 const passwordInput = $.querySelector('#passwordInput')
 const messageBox = $.querySelector('#messageBox')
 const showPassBtn = $.querySelector('.showPassBtn')
+const submitBtn = $.querySelector('.inputBtn')
 
+submitBtn.addEventListener('click' , () => {
+    let msgElem = messageBox.querySelector('.message')
+    if(msgElem.innerHTML === "Strong" || msgElem.innerHTML === "Very Strong"){
+        window.location.reload()
+    }
+})
 
 showPassBtn.addEventListener('click' , () =>{
     let showPassIcon = showPassBtn.querySelector('i')
@@ -38,11 +45,11 @@ passwordInput.addEventListener('keyup' , () =>{
         msgElem.innerHTML = "Medium"
         msgElem.style.color = 'yellow'
     }
-     if (isHaveNumberCase(value)) {
+     if (isHaveNumberCase(value)&& isHaveUpperCase(value) && isHaveLowerCase(value)) {
         msgElem.innerHTML = "Strong"
         msgElem.style.color = 'greenyellow'
     }
-     if (isHaveSymbolCase(value)) {
+     if (isHaveSymbolCase(value) && isHaveNumberCase(value) && isHaveUpperCase(value) && isHaveLowerCase(value)) {
         msgElem.innerHTML = "Very Strong"
         msgElem.style.color = 'rgb(3, 214, 3)'
     }
