@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <script
+      defer
+      src="https://kit.fontawesome.com/a6243ca7b9.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Password Strength Checker</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="inputBox">
+        <div class="showPassBtn">
+          Show password: <i class="fa-regular fa-square"></i>
+        </div>
+        <input type="password" id="passwordInput" placeholder="Password" />
+        <button type="submit" class="inputBtn">
+          <img src="./image/arrow.png" />
+        </button>
+        <div id="messageBox">
+          <samp class="passLength">0</samp> characters containing:
+          <span class="lower">Lower case</span>
+          <span class="upper"> Upper case</span>
+          <span class="num"> Numbers</span>
+          <span class="Symbol">Symbols</span>
+          <p class="message"></p>
+        </div>
+      </div>
+    </div>
+
+    <script defer src="./scripts/script.js"></script>
+  </body>
+</html>
