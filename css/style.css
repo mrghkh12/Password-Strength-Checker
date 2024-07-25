@@ -48,7 +48,20 @@
 
 .container .inputBox #messageBox{
     position: absolute;
-    bottom: -30px;
+    bottom: -45px;
+    left: 50%;
+    height: 30px;
+    transform: translateX(-50%);
+    width: max-content;
     color: #fff;
     font-size: 15px;
+}
+.container .inputBox #messageBox span:not(:first-child){
+    margin: 0 10px;
+    display: inline-block;
+    color: #a1a1a1;
+}
+.container .inputBox #messageBox .message{
+    text-align: center;
+    padding: 10px 0;
 }
