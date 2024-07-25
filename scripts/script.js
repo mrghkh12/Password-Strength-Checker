@@ -12,6 +12,7 @@ passwordInput.addEventListener('keyup' , () =>{
 
     isHaveLowerCase(value)
     isHaveUpperCase(value)
+    isHaveNumberCase(value)
 
      if (isHaveLowerCase(value)) {
         msgElem.innerHTML = "Weak"
@@ -20,6 +21,10 @@ passwordInput.addEventListener('keyup' , () =>{
      if (isHaveUpperCase(value)) {
         msgElem.innerHTML = "Medium"
         msgElem.style.color = 'yellow'
+    }
+     if (isHaveNumberCase(value)) {
+        msgElem.innerHTML = "Strong"
+        msgElem.style.color = 'rgb(3, 214, 3)'
     }
 //     if (value.search(/[A-Z]/) < 0) {
 //         console.log("Your password must contain at least one upper case letter."); 
@@ -53,6 +58,16 @@ function isHaveUpperCase(value){
         return true
     }else{
         haveUpper.style.color = 'red'
+        return false
+    }
+}
+function isHaveNumberCase(value){
+    let haveNumber = messageBox.querySelector('.num')
+    if (value.search(/[0-9]/) != -1) {
+        haveNumber.style.color = 'green'
+        return true
+    }else{
+        haveNumber.style.color = 'red'
         return false
     }
 }
