@@ -45,3 +45,10 @@
 .container .inputBox .inputBtn img{
     width: 35px;
 }
+
+.container .inputBox #message{
+    position: absolute;
+    bottom: -30px;
+    color: #fff;
+    font-size: 15px;
+}
